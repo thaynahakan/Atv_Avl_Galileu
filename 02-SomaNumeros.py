@@ -13,6 +13,9 @@ digito_3 = (numero // 10) % 10: Esta operação extrai o dígito na posição da
 digito_4 = numero % 10: Esta operação extrai o dígito na posição das unidades. Usamos o operador % 10 para obter o resto da divisão por 10, o que nos dá o dígito na posição das unidades.'''
 
 numero = int(input('Digite um número de até 4 dígitos de 0 a 9999: '))
+
+
+digito1 = digito2 = digito3 = digito4 = 0
 if numero <= 0 or numero > 9999:
     print('O número deve ter estar entre 0 e 9999.')
     print(f'Você digitou {numero}')
@@ -35,5 +38,6 @@ else:
         digito4 = numero % 10
         soma = digito1 + digito2 + digito3 + digito4
 
-    print(f'A soma dos dígitos do numero {numero} que você digitou, é: {soma}.')
+print(f'A soma dos dígitos do numero {numero} que você digitou, é: {soma}.')
+print(f'Você digitou: {numero}, a soma de {digito4} + {digito3} + {digito2} + {digito1} = {soma}.')
 #calcula a soma dos digitos:

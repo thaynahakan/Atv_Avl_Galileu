@@ -28,11 +28,6 @@ elif horas_completas <= 4:
     valor_total = horas_completas* 8+ (horas_completas - 2) * 5 # a primeira parte é partindo do pressuposto de que ja tem 16 reais das primeiras 2 horas + (a variável das horas completas menos o valor dessas duas horas que já fizemos a conta) vezes 5, as horas seguintes terão um adcional de 5 reais a hora.
 elif horas_completas <= 12:
     valor_total = 16 + 10 + (horas_completas - 4) * 3 #Horas seguintes: R$ 3,00/hora ou fração.
-
-else:
-    valor_total = 30
-
-# Adiciona o valor proporcional pela fração de hora
 if fracao_hora > 0:
     if horas_completas < 2:
         valor_total += 8
@@ -40,9 +35,13 @@ if fracao_hora > 0:
         valor_total += 5
     else:
         valor_total += 3
-
-if valor_total > 30:  #nessa parte perguntei a Você professor Galileu e após 12 horas o valor final é 30 reais e só.
+else:
+    valor_total = 0
     valor_total = 30
+
+# Adiciona o valor proporcional pela fração de hora
+
+
 
 # Exibe o valor total a ser pago
 print(f"Valor a ser pago: R$ {valor_total:.2f}")
